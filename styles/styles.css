@@ -1,3 +1,14 @@
+@keyframes bgColorChange {
+  0% {
+    background-color: var(--color-animation-start);
+  }
+  50% {
+    background-color: var(--color-animation-end);
+  }
+  100% {
+    background-color: var(--color-animation-start);
+  }
+}
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -22,6 +33,10 @@ button {
 
 html {
   font-family: var(--font-primary);
+  animation-name: bgColorChange;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 body {
@@ -40,6 +55,8 @@ button, input {
   --color-outbound-link: #6EB7C2;
   --color-form-error: #D50303;
   --color-text-heading: #FFFFFF;
+  --color-animation-start: #ECF8FB;
+  --color-animation-end: #EFEFEF;
   --font-primary: "Montserrat", san-serif;
   --font-size-heading: 18px;
   --font-height-heading: 24px;

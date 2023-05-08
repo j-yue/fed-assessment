@@ -1,4 +1,6 @@
 // reset + base and layout rules
+@use 'animation'
+
 
 // reset
 *, *::after, *::before
@@ -22,6 +24,10 @@ button
 // base + layout
 html
   font-family: var(--font-primary)
+  animation-name: bgColorChange
+  animation-duration: 10s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
 
 body
   font-size: 14px
