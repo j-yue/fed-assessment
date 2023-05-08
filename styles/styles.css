@@ -20,6 +20,19 @@ button {
   background-color: transparent;
 }
 
+html {
+  font-family: var(--font-primary);
+}
+
+body {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+button, input {
+  font-family: inherit;
+}
+
 :root {
   --color-primary: #F6931D;
   --color-secondary: #545253;
@@ -39,10 +52,6 @@ button {
   width: 1px;
   height: 1px;
   overflow: hidden;
-}
-
-:root {
-  font-family: var(--font-primary);
 }
 
 .header {
