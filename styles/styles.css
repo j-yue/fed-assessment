@@ -42,4 +42,16 @@ button {
   font-family: var(--font-primary);
 }
 
+.header {
+  height: 80px;
+  background-color: var(--color-secondary);
+}
+.header__logo {
+  display: block;
+  height: 100%;
+  background-image: url("../assets/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /*# sourceMappingURL=styles.css.map */
