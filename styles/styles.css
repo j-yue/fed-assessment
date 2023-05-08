@@ -1,0 +1,45 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+input, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+button {
+  background-color: transparent;
+}
+
+:root {
+  --color-primary: #F6931D;
+  --color-secondary: #545253;
+  --color-tertiary: #A0BC57;
+  --color-outbound-link: #6EB7C2;
+  --color-form-error: #D50303;
+  --font-primary: "Montserrat", san-serif;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+:root {
+  font-family: var(--font-primary);
+}
+
+/*# sourceMappingURL=styles.css.map */
