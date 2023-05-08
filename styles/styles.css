@@ -54,8 +54,11 @@ button, input {
   --color-primary: #F6931D;
   --color-secondary: #545253;
   --color-tertiary: #A0BC57;
+  --color-input: #747375;
   --color-outbound-link: #6EB7C2;
   --color-form-error: #D50303;
+  --color-form-fill: #FFFFFF;
+  --color-form-border: #D8D8D8;
   --color-text-heading: #FFFFFF;
   --color-animation-start: #ECF8FB;
   --color-animation-end: #EFEFEF;
@@ -87,7 +90,6 @@ button, input {
 
 main {
   width: 290px;
-  border: 1px solid pink;
   margin: auto;
 }
 
@@ -105,6 +107,21 @@ main {
   align-items: center;
   text-align: center;
   margin-top: 15px;
+}
+
+form input {
+  height: 50px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: var(--color-input);
+  width: 100%;
+  padding: 10px;
+  background-color: var(--color-form-fill);
+  border: 1px solid var(--color-form-border);
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=styles.css.map */
