@@ -71,3 +71,78 @@ form
     
 
 
+
+.card
+  margin-top: 42px
+  width: 290px
+  padding: 15px
+  border-left: 2px solid var(--color-tertiary)
+  border-right: 2px solid var(--color-tertiary)
+  border-bottom: 2px solid var(--color-tertiary)
+  position: relative
+  clip-path: border-box
+
+  &__open-border
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    // border: 1px solid black
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+
+  &__half-border
+    width: 45px
+    height: 0
+    border-top: 2px solid var(--color-tertiary)
+    &--left
+      border-top-right-radius: 2px
+      border-bottom-right-radius: 2px
+    &--right
+      border-top-left-radius: 2px
+      border-bottom-left-radius: 2px
+
+
+
+
+  &::before
+    content: 'even more savings'
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 15px
+    line-height: 15px
+    position: absolute
+    top: -7px
+    left: 50%
+    transform: translate(-50%, 0)
+    width: 100%
+    text-align: center
+    
+    
+
+  &__overlay
+    background: rgba(255,255,255,0.75)
+    overlay: .9
+    padding: 15px
+    padding-bottom: 25px
+
+  &__category
+    font-weight: 600
+    color: var(--color-tertiary)
+    text-transform: uppercase
+    font-size: 12px
+    line-height: 15px
+    padding-bottom: 2px
+
+  &__header
+    font-size: 20px
+    line-height: 24px
+    padding-bottom: 12px
+
+  &__link
+    font-weight: 600
+    color: var(--color-outbound-link)
+
+
+

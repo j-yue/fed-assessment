@@ -21,6 +21,13 @@ html, body {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 input, button {
   margin: 0;
   padding: 0;
@@ -44,6 +51,8 @@ html {
 body {
   font-size: 14px;
   font-weight: 300;
+  line-height: 18px;
+  color: var(--color-secondary);
 }
 
 button, input {
@@ -147,6 +156,75 @@ form button {
   height: 48px;
   width: 100%;
   text-transform: uppercase;
+}
+
+.card {
+  margin-top: 42px;
+  width: 290px;
+  padding: 15px;
+  border-left: 2px solid var(--color-tertiary);
+  border-right: 2px solid var(--color-tertiary);
+  border-bottom: 2px solid var(--color-tertiary);
+  position: relative;
+  clip-path: border-box;
+}
+.card__open-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.card__half-border {
+  width: 45px;
+  height: 0;
+  border-top: 2px solid var(--color-tertiary);
+}
+.card__half-border--left {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.card__half-border--right {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.card::before {
+  content: "even more savings";
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 15px;
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  text-align: center;
+}
+.card__overlay {
+  background: rgba(255, 255, 255, 0.75);
+  overlay: 0.9;
+  padding: 15px;
+  padding-bottom: 25px;
+}
+.card__category {
+  font-weight: 600;
+  color: var(--color-tertiary);
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  padding-bottom: 2px;
+}
+.card__header {
+  font-size: 20px;
+  line-height: 24px;
+  padding-bottom: 12px;
+}
+.card__link {
+  font-weight: 600;
+  color: var(--color-outbound-link);
 }
 
 /*# sourceMappingURL=styles.css.map */
