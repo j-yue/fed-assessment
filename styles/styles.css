@@ -146,6 +146,7 @@ form button {
   text-align: center;
   height: 48px;
   width: 100%;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=styles.css.map */
