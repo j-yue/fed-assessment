@@ -26,7 +26,10 @@ button {
   --color-tertiary: #A0BC57;
   --color-outbound-link: #6EB7C2;
   --color-form-error: #D50303;
+  --color-text-heading: #FFFFFF;
   --font-primary: "Montserrat", san-serif;
+  --font-size-heading: 18px;
+  --font-height-heading: 24px;
 }
 
 .sr-only {
@@ -52,6 +55,28 @@ button {
   background-image: url("../assets/logo.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+main {
+  width: 290px;
+  border: 1px solid pink;
+  margin: auto;
+}
+
+.headline {
+  background-color: var(--color-secondary);
+  color: var(--color-text-heading);
+  font-weight: 600;
+  font-size: var(--font-size-heading);
+  line-height: var(--font-height-heading);
+  letter-spacing: 0;
+  height: 127px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */
