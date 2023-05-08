@@ -37,7 +37,7 @@ html {
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  background-image: url("../assets/bg-gradient.svg"), url("../assets/bg-pattern.svg");
+  background-image: url("../assets/bg-gradient.svg"), url("../assets/bg-pattern.png");
   background-repeat: repeat-x, repeat;
 }
 
