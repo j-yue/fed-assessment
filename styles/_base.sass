@@ -1,6 +1,6 @@
 // reset + base and layout rules
 @use 'animation'
-
+@use 'mixins'
 
 // reset
 *, *::after, *::before
@@ -29,19 +29,15 @@ button
 // base + layout
 html
   font-family: var(--font-primary)
+  @include mixins.font($size: 14px, $height: 18px, $spacing: 0, $weight: 300)
+  color: var(--color-secondary)
+
   animation-name: bgColorChange
   animation-duration: 10s
   animation-iteration-count: infinite
   animation-timing-function: ease-in-out
   background-image: url('../assets/bg-gradient.svg'), url('../assets/bg-pattern.png')
   background-repeat: repeat-x, repeat
-
-body
-  font-size: 14px
-  font-weight: 300
-  line-height: 18px  
-  color: var(--color-secondary)
-
 
 button, input
   font-family: inherit

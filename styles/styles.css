@@ -40,19 +40,17 @@ button {
 
 html {
   font-family: var(--font-primary);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+  font-weight: 300;
+  color: var(--color-secondary);
   animation-name: bgColorChange;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   background-image: url("../assets/bg-gradient.svg"), url("../assets/bg-pattern.png");
   background-repeat: repeat-x, repeat;
-}
-
-body {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 18px;
-  color: var(--color-secondary);
 }
 
 button, input {
@@ -105,10 +103,10 @@ main {
 .headline {
   background-color: var(--color-secondary);
   color: var(--color-text-heading);
-  font-weight: 600;
   font-size: var(--font-size-heading);
   line-height: var(--font-height-heading);
   letter-spacing: 0;
+  font-weight: 600;
   height: 127px;
   display: flex;
   flex-flow: row nowrap;
@@ -118,25 +116,22 @@ main {
   margin-top: 15px;
 }
 
-.form__container {
-  box-shadow: 0 7px 14px 0 rgba(110, 183, 194, 0.37);
-}
-
 form {
-  padding: 0 24px;
-  padding-top: 15px;
-  padding-bottom: 22px;
+  padding: 15px 24px 22px 24px;
   background-color: var(--color-form-fill);
+}
+form__container {
+  box-shadow: 0 7px 14px 0 rgba(110, 183, 194, 0.37);
 }
 form div {
   margin-bottom: 20px;
 }
 form input {
   height: 50px;
-  font-weight: 300;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0;
+  font-weight: 300;
   color: var(--color-input);
   width: 100%;
   padding: 10px;
@@ -149,24 +144,24 @@ form button {
   background-color: var(--color-primary);
   color: var(--color-text-heading);
   border-radius: 100px;
-  font-weight: 400;
-  letter-spacing: 0.85px;
+  font-size: 16px;
   line-height: 24px;
-  text-align: center;
+  letter-spacing: 0.85px;
+  font-weight: 400;
   height: 48px;
   width: 100%;
   text-transform: uppercase;
 }
 
 .card {
+  --border-styles: 2px solid var(--color-tertiary);
   margin-top: 42px;
   width: 290px;
   padding: 15px;
-  border-left: 2px solid var(--color-tertiary);
-  border-right: 2px solid var(--color-tertiary);
-  border-bottom: 2px solid var(--color-tertiary);
+  border-left: var(--border-styles);
+  border-right: var(--border-styles);
+  border-bottom: var(--border-styles);
   position: relative;
-  clip-path: border-box;
 }
 .card__open-border {
   position: absolute;
@@ -180,7 +175,7 @@ form button {
 .card__half-border {
   width: 45px;
   height: 0;
-  border-top: 2px solid var(--color-tertiary);
+  border-top: var(--border-styles);
 }
 .card__half-border--left {
   border-top-right-radius: 2px;

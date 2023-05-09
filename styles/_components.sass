@@ -1,6 +1,9 @@
+@use 'mixins'
+
 .header
   height: 80px
   background-color: var(--color-secondary)
+
   &__logo
     display: block
     height: 100%
@@ -17,10 +20,7 @@ main
 .headline
   background-color: var(--color-secondary)
   color: var(--color-text-heading)
-  font-weight: 600
-  font-size: var(--font-size-heading)
-  line-height: var(--font-height-heading)
-  letter-spacing: 0
+  @include mixins.font($size: var(--font-size-heading), $height: var(--font-height-heading), $weight: 600)
   height: 127px
   display: flex
   flex-flow: row nowrap
@@ -30,25 +30,19 @@ main
   margin-top: 15px
 
 
-
-.form__container
-  box-shadow: 0 7px 14px 0 rgba(110,183,194,0.37)
-
 form
-  padding: 0 24px
-  padding-top: 15px
-  padding-bottom: 22px
+  padding: 15px 24px 22px 24px
   background-color: var(--color-form-fill)
+
+  &__container
+    box-shadow: 0 7px 14px 0 rgba(110,183,194,0.37)
 
   div
     margin-bottom: 20px
 
   input
     height: 50px
-    font-weight: 300
-    font-size: 16px
-    line-height: 30px
-    letter-spacing: 0
+    @include mixins.font($size: 16px, $height: 30px)
     color: var(--color-input)
     width: 100%
     padding: 10px
@@ -61,33 +55,27 @@ form
     background-color: var(--color-primary)
     color: var(--color-text-heading)
     border-radius: 100px
-    font-weight: 400
-    letter-spacing: .85px
-    line-height: 24px
-    text-align: center
+    @include mixins.font($size: 16px, $height: 24px, $weight: 400, $spacing: 0.85px)
     height: 48px
     width: 100%
     text-transform: uppercase
     
 
-
-
 .card
+  --border-styles: 2px solid var(--color-tertiary)
   margin-top: 42px
   width: 290px
   padding: 15px
-  border-left: 2px solid var(--color-tertiary)
-  border-right: 2px solid var(--color-tertiary)
-  border-bottom: 2px solid var(--color-tertiary)
+  border-left: var(--border-styles)
+  border-right: var(--border-styles)
+  border-bottom: var(--border-styles)
   position: relative
-  clip-path: border-box
 
   &__open-border
     position: absolute
     top: 0
     left: 0
     width: 100%
-    // border: 1px solid black
     display: flex
     flex-flow: row nowrap
     justify-content: space-between
@@ -95,16 +83,13 @@ form
   &__half-border
     width: 45px
     height: 0
-    border-top: 2px solid var(--color-tertiary)
+    border-top: var(--border-styles)
     &--left
       border-top-right-radius: 2px
       border-bottom-right-radius: 2px
     &--right
       border-top-left-radius: 2px
       border-bottom-left-radius: 2px
-
-
-
 
   &::before
     content: 'even more savings'
@@ -119,8 +104,6 @@ form
     width: 100%
     text-align: center
     
-    
-
   &__overlay
     background: rgba(255,255,255,0.75)
     overlay: .9
