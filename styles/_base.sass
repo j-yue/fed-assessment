@@ -37,8 +37,13 @@ html
   animation-duration: 10s
   animation-iteration-count: infinite
   animation-timing-function: ease-in-out
-  background-image: url('../assets/bg-gradient.svg'), url('../assets/bg-pattern.png')
+  // background-image: url('../assets/bg-gradient.svg'), -webkit-image-set(url('../assets/bg-pattern.png') 1x, url('../assets/bg-pattern-2x.png') 2x)
+  // background-image: url('../assets/bg-gradient.svg'), image-set(url('../assets/bg-pattern.png') 1x, url('../assets/bg-pattern-2x.png') 2x)
+
+  // url('../assets/bg-pattern-2x.png')
+  background-image: url('../assets/bg-gradient.svg'), url('../assets/bg-pattern-2x.png')
   background-repeat: repeat-x, repeat
+  background-size: auto, var(--retina-bg-size)
 
 button, input
   font-family: inherit

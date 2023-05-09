@@ -50,8 +50,9 @@ html {
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  background-image: url("../assets/bg-gradient.svg"), url("../assets/bg-pattern.png");
+  background-image: url("../assets/bg-gradient.svg"), url("../assets/bg-pattern-2x.png");
   background-repeat: repeat-x, repeat;
+  background-size: auto, var(--retina-bg-size);
 }
 
 button, input {
@@ -89,6 +90,7 @@ button, input {
   --padding-bottom-form: 22px;
   --padding-left-input: 10px;
   --padding-x-card: 15px;
+  --retina-bg-size: auto;
 }
 
 .sr-only {
@@ -274,6 +276,7 @@ main {
     --padding-top-form: 29px;
     --padding-bottom-form: 27px;
     --padding-x-card: 20px;
+    --retina-bg-size: 3000px 3000px;
   }
 }
 
