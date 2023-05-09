@@ -15,15 +15,16 @@
 main
   width: var(--width-main)
   margin: auto
+  padding-bottom: var(--padding-bottom-main)
 
 
 .headline
   background-color: var(--color-secondary)
   color: var(--color-text-heading)
   @include mixins.font($size: var(--font-size-heading), $height: var(--font-height-heading), $weight: 600)
-  margin-top: 15px
+  margin-top: var(--margin-top-main)
   height: 127px
-  padding: 15px 22px
+  padding: var(--padding-x-headline) var(--padding-y-headline)
   display: flex
   flex-flow: row nowrap
   align-items: center
@@ -31,7 +32,7 @@ main
 
 
 .form
-  padding: 15px 24px 22px 24px
+  padding: var(--padding-top-form) var(--padding-x-form) var(--padding-bottom-form) var(--padding-x-form)
   background-color: var(--color-form-fill)
 
   &__container
@@ -45,7 +46,7 @@ main
     @include mixins.font($size: 16px, $height: 30px)
     color: var(--color-input)
     width: 100%
-    padding: 10px
+    padding: var(--padding-left-input)
     background-color: var(--color-form-fill)
     border: 1px solid var(--color-form-border)
     border-radius: 4px
@@ -57,10 +58,10 @@ main
     justify-content: space-between
 
   &__city
-    width: 153px
+    width: var(--width-city)
 
   &__state
-    width: 78px
+    width: var(--width-state)
 
 
   button
@@ -69,17 +70,20 @@ main
     border-radius: 100px
     @include mixins.font($size: 16px, $height: 24px, $weight: 400, $spacing: 0.85px)
     height: 48px
-    width: 100%
+    width: var(--width-submit)
+    display: block
+    margin: auto
     text-transform: uppercase
     
 
-
-
 .card
   --border-styles: 2px solid var(--color-tertiary)
-  margin-top: 42px
-  width: var(--width-main)
-  padding: 15px
+  margin-top: var(--margin-top-card)
+  margin-left: auto
+  margin-right: auto
+  width: var(--width-card)
+  // padding: 15px
+  padding: 15px var(--padding-x-card)
   border-left: var(--border-styles)
   border-right: var(--border-styles)
   border-bottom: var(--border-styles)
@@ -95,12 +99,14 @@ main
     justify-content: space-between
 
   &__half-border
-    width: 45px
+    width: var(--width-half-border)
     height: 0
     border-top: var(--border-styles)
+
     &--left
       border-top-right-radius: 2px
       border-bottom-right-radius: 2px
+
     &--right
       border-top-left-radius: 2px
       border-bottom-left-radius: 2px
@@ -117,8 +123,9 @@ main
     text-align: center
     
   &__overlay
+    opacity: 0.9
     background: rgba(255,255,255,0.75)
-    overlay: .9
+
     padding: 15px
     padding-bottom: 25px
 
@@ -136,6 +143,4 @@ main
   &__link
     font-weight: 600
     color: var(--color-outbound-link)
-
-
 

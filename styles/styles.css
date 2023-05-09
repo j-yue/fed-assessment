@@ -74,6 +74,21 @@ button, input {
   --font-size-heading: 18px;
   --font-height-heading: 24px;
   --width-main: 290px;
+  --width-card: 290px;
+  --width-city: 153px;
+  --width-state: 78px;
+  --width-submit: 242px;
+  --width-half-border: 49px;
+  --margin-top-main: 15px;
+  --margin-top-card: 42px;
+  --padding-bottom-main: 41px;
+  --padding-x-headline: 15px;
+  --padding-y-headline: 22px;
+  --padding-x-form: 24px;
+  --padding-top-form: 15px;
+  --padding-bottom-form: 22px;
+  --padding-left-input: 10px;
+  --padding-x-card: 15px;
 }
 
 .sr-only {
@@ -100,6 +115,7 @@ button, input {
 main {
   width: var(--width-main);
   margin: auto;
+  padding-bottom: var(--padding-bottom-main);
 }
 
 .headline {
@@ -109,9 +125,9 @@ main {
   line-height: var(--font-height-heading);
   letter-spacing: 0;
   font-weight: 600;
-  margin-top: 15px;
+  margin-top: var(--margin-top-main);
   height: 127px;
-  padding: 15px 22px;
+  padding: var(--padding-x-headline) var(--padding-y-headline);
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -119,7 +135,7 @@ main {
 }
 
 .form {
-  padding: 15px 24px 22px 24px;
+  padding: var(--padding-top-form) var(--padding-x-form) var(--padding-bottom-form) var(--padding-x-form);
   background-color: var(--color-form-fill);
 }
 .form__container {
@@ -136,7 +152,7 @@ main {
   font-weight: 300;
   color: var(--color-input);
   width: 100%;
-  padding: 10px;
+  padding: var(--padding-left-input);
   background-color: var(--color-form-fill);
   border: 1px solid var(--color-form-border);
   border-radius: 4px;
@@ -148,10 +164,10 @@ main {
   justify-content: space-between;
 }
 .form__city {
-  width: 153px;
+  width: var(--width-city);
 }
 .form__state {
-  width: 78px;
+  width: var(--width-state);
 }
 .form button {
   background-color: var(--color-primary);
@@ -162,15 +178,19 @@ main {
   letter-spacing: 0.85px;
   font-weight: 400;
   height: 48px;
-  width: 100%;
+  width: var(--width-submit);
+  display: block;
+  margin: auto;
   text-transform: uppercase;
 }
 
 .card {
   --border-styles: 2px solid var(--color-tertiary);
-  margin-top: 42px;
-  width: var(--width-main);
-  padding: 15px;
+  margin-top: var(--margin-top-card);
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--width-card);
+  padding: 15px var(--padding-x-card);
   border-left: var(--border-styles);
   border-right: var(--border-styles);
   border-bottom: var(--border-styles);
@@ -186,7 +206,7 @@ main {
   justify-content: space-between;
 }
 .card__half-border {
-  width: 45px;
+  width: var(--width-half-border);
   height: 0;
   border-top: var(--border-styles);
 }
@@ -213,8 +233,8 @@ main {
   text-align: center;
 }
 .card__overlay {
+  opacity: 0.9;
   background: rgba(255, 255, 255, 0.75);
-  overlay: 0.9;
   padding: 15px;
   padding-bottom: 25px;
 }
@@ -235,6 +255,26 @@ main {
 .card__link {
   font-weight: 600;
   color: var(--color-outbound-link);
+}
+
+@media (min-width: 767px) {
+  :root {
+    --width-main: 670px;
+    --width-card: 404px;
+    --width-city: 353px;
+    --width-state: 181px;
+    --width-submit: 333px;
+    --width-half-border: 68px;
+    --margin-top-main: 33px;
+    --margin-top-card: 40px;
+    --padding-bottom-main: 91px;
+    --padding-y-headline: 77px;
+    --padding-left-input: 25px;
+    --padding-x-form: 54px;
+    --padding-top-form: 29px;
+    --padding-bottom-form: 27px;
+    --padding-x-card: 20px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
