@@ -30,7 +30,6 @@
     return result;
   }
 
-  const form = document.querySelector("form");
   const name = document.querySelector("#name");
   const email = document.querySelector("#email");
   const ERROR_CLASS = "form--error";
@@ -44,4 +43,50 @@
       if (!isValid) target.classList.add(ERROR_CLASS);
     });
   });
+
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // since ignoring errors, do not wait for promise to resolve
+    fetch(form.action, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(getFormData()),
+    });
+
+    //simulate waiting for server response by delaying button update
+    setTimeout(updateButton, 700);
+  });
+
+  function updateButton() {
+    const submit = document.querySelector("button[type='submit']");
+    submit.textContent = "Submitted";
+    submit.disabled = true;
+  }
+
+  function getFormData() {
+    const inputSelectors = {
+      name: "#name",
+      city: "#city",
+      state: "#state",
+      tel: "#tel",
+      email: "#email",
+    };
+
+    const data = {};
+
+    Object.entries(inputSelectors).forEach(function (entry) {
+      const key = entry[0];
+      const sel = entry[1];
+      const el = document.querySelector(sel);
+      data[key] = el.value;
+    });
+
+    return data;
+  }
 })();
