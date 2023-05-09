@@ -14,17 +14,25 @@
 
   //error styling-----------------
   //change border color of invalid fields
+  //
   const name = document.querySelector("#name");
   const email = document.querySelector("#email");
   const ERROR_CLASS = "form--error";
 
   //give red border to invalid inputs
+  //invalid inputs show custom error messages
   [name, tel, email].forEach(function (_input) {
     _input.addEventListener("input", function (e) {
       const target = e.target;
-      const isValid = target.validity.valid;
-      if (isValid) target.classList.remove(ERROR_CLASS);
-      if (!isValid) target.classList.add(ERROR_CLASS);
+      const invalid = target.validity.patternMismatch;
+      if (invalid) {
+        target.classList.add(ERROR_CLASS);
+        target.setCustomValidity(target.title);
+      }
+      if (!invalid) {
+        target.classList.remove(ERROR_CLASS);
+        target.setCustomValidity("");
+      }
     });
   });
 
