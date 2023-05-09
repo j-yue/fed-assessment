@@ -39,6 +39,8 @@
               placeholder="Name"
               id="name"
               name="name"
+              pattern="[\w ]{2,}"
+              title="Minimum 2 characters"
               required
             />
           </div>
@@ -74,6 +76,7 @@
               placeholder="Phone Number"
               id="tel"
               name="tel"
+              pattern="\(\d{3}\)\s{1}\d{3}-\d{4}"
               title="10-digit US phone number: (XXX) XXX-XXXX"
               required
             />
