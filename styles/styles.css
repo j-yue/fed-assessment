@@ -190,9 +190,10 @@ form button {
 .card::before {
   content: "even more savings";
   text-transform: uppercase;
-  font-weight: 600;
   font-size: 15px;
   line-height: 15px;
+  letter-spacing: 0;
+  font-weight: 600;
   position: absolute;
   top: -7px;
   left: 50%;
@@ -207,11 +208,12 @@ form button {
   padding-bottom: 25px;
 }
 .card__category {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0;
   font-weight: 600;
   color: var(--color-tertiary);
   text-transform: uppercase;
-  font-size: 12px;
-  line-height: 15px;
   padding-bottom: 2px;
 }
 .card__header {

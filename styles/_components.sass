@@ -94,9 +94,7 @@ form
   &::before
     content: 'even more savings'
     text-transform: uppercase
-    font-weight: 600
-    font-size: 15px
-    line-height: 15px
+    @include mixins.font($size: 15px, $height: 15px, $weight: 600)
     position: absolute
     top: -7px
     left: 50%
@@ -111,11 +109,9 @@ form
     padding-bottom: 25px
 
   &__category
-    font-weight: 600
+    @include mixins.font($size: 12px, $height: 15px, $weight: 600)
     color: var(--color-tertiary)
     text-transform: uppercase
-    font-size: 12px
-    line-height: 15px
     padding-bottom: 2px
 
   &__header
